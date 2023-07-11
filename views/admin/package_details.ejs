@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/car_rental_details.css">
+   
+
+    <title>Hotel Details </title>
+</head>
+
+<body>
+    <div class="container">
+        <header>Hotel Details</header>
+
+        <form action="#">
+            <div class="form first">
+
+                <div class="details ID">
+                    <span class="title">Hotel Details</span>
+
+                    <div class="fields">
+                        <div class="car_image input-field">
+                            <img src="/Upload/<%= package1.image %>" height="200px">
+                        </div>
+                        <div class="input-field">
+                            <label>Title of Trip</label>
+                            <p><%= package1.title %></p>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Trip Category</label>
+                            <p><%= package1.category%></p>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Car Type</label>
+                            <p><%= package1.car_type %></p>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Number of Days</label>
+                            <p><%= package1.number_days %></p>
+                        </div>
+                        <div class="input-field">
+                            <label>Number of Days</label>
+                            <p><%= package1.number_nights %></p>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Price</label>
+                            <p><%= package1.price %></p>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Discount</label>
+                            <p><%= package1.discount %></p>
+                        </div>
+                       
+                       
+                    </div>
+                </div>
+
+                <div class="input-field_1">
+                    <label>Tour Include</label>                
+                   
+                    <% for (let i = 0; i < package1.tour_include.length; i++) { %>
+                        <ol>
+                            
+                            <li> <%= package1.tour_include[i] %></li>
+                            
+                        </ol>
+                        <% } %>
+                </div>
+                <div class="input-field_1">
+                    <label>Tour Exclude</label>                
+                   
+                    <% for (let i = 0; i < package1.tour_exclude.length; i++) { %>
+                        <ol>
+                            
+                            <li> <%= package1.tour_exclude[i] %></li>
+                            
+                        </ol>
+                        <% } %>
+                </div>
+                <div class="input-field_1">
+                    <label>Tour Accomadation</label>                
+                   
+                    <% for (let i = 0; i < package1.accomadation.length; i++) { %>
+                        <ol>
+                            
+                            <li> <%= package1.accomadation[i] %></li>
+                            
+                        </ol>
+                        <% } %>
+                </div>
+                <button class="nextBtn">
+                    <span class="btnText">Back</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

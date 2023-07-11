@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/all_forms.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+  crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+  integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+  crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+  integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+  crossorigin="anonymous"></script>
+  <title>Trip Packages</title>
+</head>
+
+<body>
+  <div class="container2">
+     <% if (message) { %>
+      <div class="alert alert-success" role="alert">
+        <%=message %>
+      </div>
+      
+      <% } %>
+
+
+        <form action="/submit-a-new-pacakge" class="container1" method="post" enctype="multipart/form-data">
+
+          <div class="left">
+            <div class="portion">
+              <p><b>(Do You apply the following rules for the car) </b></p>
+              <input type="checkbox" name="rules" id="" class="form-check-input"> Rules <br>
+              <ol>
+                <li>Lorem ipsum dolor sit amet. </li>
+                <li>We are not responsible for your luggage protection</li>
+                <li><input type="text"  class="form-control" id="exampleInputEmail1" name="newRule"
+                    aria-describedby="emailHelp" placeholder="other">
+                </li>
+              </ol>
+            </div>
+            <div class="portion">
+              <div id="input-container">
+                <h3>Tour Include(services) </h3>
+                <input type="text" name="tour_include" class="form-control " id="exampleInputEmail1 add_feild"
+                  aria-describedby="emailHelp" placeholder="Add Your Inclue">
+              </div>
+              <a href="#" id="include" class="btn btn-primary mt-3" onclick="addInput()"><i
+                  class="fa fa-plus-circle icon" aria-hidden="true"></i>Add Tour Include</a href="#">
+            </div>
+            <script>
+              function addInput() {
+                // Create a new input element
+                var newInput = document.createElement("input");
+
+                // Set the attributes of the new input element
+                newInput.type = "text";
+                newInput.name = "tour_include";
+                
+                newInput.placeholder = "Enter new value";
+                newInput.setAttribute('class', 'form-control mt-3');
+                // Get a reference to the container element
+                var container = document.getElementById("input-container");
+
+                // Append the new input element to the container
+                container.appendChild(newInput);
+                
+      req.body.push(newInput);
+      
+        
+              }
+            </script>
+
+
+            <div class="portion">
+              <div id="input-container1">
+                <h3>Tour Excludes </h3>
+                <input type="text" class="form-control " name="tour_exclude" id="exampleInputEmail1 add_feild"
+                  aria-describedby="emailHelp" placeholder="Add Your Exclude">
+              </div>
+              <a href="#" id="include" class="btn btn-primary mt-3" onclick="addInput1()"><i
+                  class="fa fa-plus-circle icon" aria-hidden="true"></i> Add more Exclude</a href="#">
+            </div>
+            <script>
+              function addInput1() {
+                // Create a new input element
+                var newInput = document.createElement("input");
+
+                // Set the attributes of the new input element
+                newInput.type = "text";
+                newInput.name = "tour_exclude";
+                newInput.placeholder = "Enter new value";
+                newInput.setAttribute('class', 'form-control mt-3');
+                // Get a reference to the container element
+                var container = document.getElementById("input-container1");
+
+                // Append the new input element to the container
+                container.appendChild(newInput);
+                req.body.push(newInput);
+              }
+            </script>
+            <div class="portion">
+              <div id="input-container2">
+                <h3>Accomodation</h3>
+                <input type="text" class="form-control " name="accomadation" id="exampleInputEmail1 add_feild"
+                  aria-describedby="emailHelp" placeholder="Add Your Accomadation">
+              </div>
+              <a href="#" id="include" class="btn btn-primary mt-3" onclick="addInput2()"><i
+                  class="fa fa-plus-circle icon" aria-hidden="true"></i> Add more Accomadation</a href="#">
+            </div>
+            <script>
+              function addInput2() {
+                // Create a new input element
+                var newInput = document.createElement("input");
+
+                // Set the attributes of the new input element
+                newInput.type = "text";
+                newInput.name = "accomadation";
+                newInput.placeholder = "Enter new value";
+                newInput.setAttribute('class', 'form-control mt-3');
+                // Get a reference to the container element
+                var container = document.getElementById("input-container2");
+
+                // Append the new input element to the container
+                container.appendChild(newInput);
+                req.body.push(newInput);
+              }
+            </script>
+
+          </div>
+          <div class="right">
+            <h2 class="maintext">Add Trip Packages Details</h2>
+            <div class="outer-container">
+              <div class="containerx">
+
+                <input type="file" id="file" name="image" accept="image/*" hidden>
+                <div class="image-area" data-img="hello.png">
+
+                  <i class="fa fa-cloud-upload iconx" aria-hidden="true"></i>
+                  <h3>Upload Image</h3>
+                  <p>Image size must be less than <span>100x100 </span> px</p>
+                 
+                </div>
+                <button type="button" class="select-image" > <input type="file" id="file" name="image"
+                    accept="image/*" hidden >Choose image</button>
+              </div>
+            </div>
+            <br>
+
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Title of Package</label>
+              <input type="text" name="title" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                placeholder="i.e Lahore" required >
+            </div>
+           
+         
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Description</label>
+              <textarea class="form-control" name="description" placeholder="Add Description" id="floatingTextarea2"
+                style="height: 100px" required></textarea>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label ">Select a Category</label>
+              <select name="category" class=" form-select" aria-label="Default select example" id="category"
+                onclick="display()" required>
+                <option selected value="">Select</option>
+                <option value="Family">Family</option>
+                <option value="Group">Group</option>
+                <option value="Honymoon">Honymoon</option>
+                
+
+
+              </select>
+             
+             
+             
+            
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label ">Car Type</label>
+              <select name="car_type" class="form-control" aria-label="Default select example" required>
+                <option selected value="">Select</option>
+                <option value="car">Car</option>
+                <option value="bus">Bus</option>
+                <option value="van">Van</option>
+                <option value="other">Other</option>
+
+              </select>
+            </div>
+           
+            <div class=" parallel w-100">
+              <div class="d-flex flex-row  w-100">
+                <label for="exampleInputEmail1" class="mx-3  w-100 form-label">Number of Days</label>
+                <label for="exampleInputEmail1" class="mx-3  w-100 form-label">Number of Nights</label>
+
+
+              </div>
+            </div>
+            <div class=" parallel ">
+              <div class="d-flex flex-row   w-100 ">
+                <input name="number_days" type="text" class="form-control P-2  w-100" aria-label="Username" id="" pattern="[0-9.]+" title="Only Numbers Allowed" required  >
+                <input name="number_nights" type="text" class="form-control P-2  w-100" aria-label="Server" id="" pattern="[0-9.]+" title="Only Numbers Allowed"  required >
+
+
+
+              </div>
+            </div>
+           
+            <div class=" parallel w-100">
+              <div class="d-flex flex-row  w-100">
+                <label for="exampleInputEmail1" class="mx-3  w-100 form-label  fw-normal">Price</label>
+                <label for="exampleInputEmail1" class="mx-3  w-100 form-label  fw-normal">Discount</label>
+              </div>
+            </div>
+            <div class=" parallel w-100">
+              <div class="d-flex flex-row  w-100">
+                <input name="price" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" pattern="[0-9.]+" title="Only Numbers Allowed" required >
+                <input name="discount" type="Number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    
+               
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary w-100 mt-3  ">Submit</button>
+
+          </div>
+
+        </form>
+      </div>
+      <script src="/js/upload_image.js"></script>
+  <script>
+    var date = new Date();
+    var tdate = date.getDate() + 1;
+    var month = date.getMonth() + 1;
+    if (month < 10) {
+    month = "0" + month}
+    if (tdate < 10) {
+    tdate = "0" + tdate;}
+    var year = date.getUTCFullYear();
+    var minDate = year + "-" + month + "-" + tdate;
+    document.getElementById("demo").setAttribute("min", minDate);
+    console.log(minDate);
+</script>
+</body>
+
+</html>

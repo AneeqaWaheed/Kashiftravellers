@@ -1,0 +1,314 @@
+
+/* .grid-container{
+    display: grid;
+  grid-template-columns: 25% 25% 25%;
+} */
+.box{
+    height: 200px;
+    margin: 5px 15px;
+    padding: 10px;
+    display: flex;
+    flex-flow: row nowrap;
+    width: 312px;
+    border-radius: 5px;
+    
+    background-color: white;
+    color: black;
+ 
+    text-decoration: none;
+}
+
+.back{
+    width: 30%;
+    float: right;
+   
+   
+}
+
+.incontent{
+   
+    width: 80%;
+  
+    
+}
+
+
+.section2 h2{
+    color: blue;
+    font-size: 28px;
+    font-weight: bold;
+    text-decoration: none;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+@media (max-width:320px){
+    .title{
+       font-size: 4px;
+       margin-left: 3px;
+    }
+    .logo{
+       display: none;
+    }
+    .list{
+        display: none;
+       }
+       .side_icon{
+        font-size: 10px;
+    }
+    .admin{
+        display: none;
+    }
+    form{
+        height: 12px;
+        background-color:#eee
+        }
+    #vertical_line{
+        display: none;
+    }
+       .icon{
+        font-size: 8px;
+       }
+       .icon2{
+        font-size: 20px;
+       }
+       .new_package{
+        font-size: 16px;
+    }
+    .package_detail{
+        display: none;
+    }
+    .icon1{
+        font-size: 20px;
+    }
+    .search{
+        box-shadow: none;
+    }
+    .container1{
+        width: 100%;
+    }
+  
+}
+@media (min-width:320px) and (max-width:430px){
+    .title{
+        font-size: 6px;
+    }
+    .logo{
+        width: 11px;
+        height: 11px;
+    }
+    .side_icon{
+        font-size: 10px;
+    }
+    .admin{
+        display: none;
+    }
+    .list{
+        display: none;
+       }
+       #vertical_line{
+        display: none;
+    }
+       form{
+        height: 15px;
+        background-color:#eee
+       }
+       .icon{
+        font-size: 11px;
+       }
+       .icon2{
+        font-size: 30px;
+       }
+       .new_package{
+        font-size: 18px;
+    }
+    .package_detail{
+        display: none;
+    }
+    .icon1{
+        font-size: 22px;
+    }
+    .search{
+        box-shadow: none;
+    }
+    .container1{
+        width: 100%;
+    }
+}
+@media (min-width:430px) and (max-width:560px){
+    .title{
+        font-size: 8px;
+    }
+    .logo{
+        width: 13px;
+        height: 13px;
+    }
+    .list{
+        font-size: 10px;
+        margin-left: 1px ;
+    }
+
+    .search{
+        box-shadow: none;
+    }
+    .side_icon{
+        font-size: 8px;
+    }
+    .admin{
+        font-size: 10px;
+    }
+    form{
+        height: 18px;
+        background-color:#eee
+    }
+    .icon{
+        font-size: 12px;
+    }
+    .icon2{
+        font-size: 33px;
+    }
+    .new_package{
+        font-size: 20px;
+    }
+    .icon1{
+        font-size: 25px;
+    }
+    .container1{
+        width: 100%;
+    }
+}
+@media (min-width:560px) and (max-width:690px){
+    .title{
+        font-size: 10px;
+    }
+    .logo{
+        width: 16px;
+        height: 16px;
+    }
+    .list{
+        font-size: 14px;
+    }
+    .side_icon{
+        font-size: 12px;
+    }
+    .form{
+        height: 21px;
+    }
+    .icon{
+        font-size: 13px;
+    }
+    .icon2{
+        font-size: 36px;
+    }
+    .new_package{
+        font-size: 22px;
+    }
+    .icon1{
+        font-size: 27px;
+    }
+    .container1{
+        width: 100%;
+    }
+}
+@media (min-width:690px) and (max-width:830px){
+    .title{
+        font-size: 13px;
+    }
+    .logo{
+        width: 20px;
+        height: 20px;
+    }
+    .list{
+        font-size: 17px;
+    }
+    .side_icon{
+        font-size: 15px;
+    }
+    form{
+        height: 24px;
+    }
+    .icon{
+        font-size: 14px;
+    }
+    .icon2{
+        font-size: 39px;
+    }
+    .new_package{
+        font-size: 24px;
+    }
+    .icon1{
+        font-size: 29px;
+    }
+    .container1{
+        width: 100%;
+    }
+}
+@media (min-width:830px) and (max-width:1000px){
+    .title{
+        font-size: 14px;
+    }
+    .logo{
+        width: 25px;
+        height: 25px;
+    }
+    form{
+        height: 27px;
+    }
+    .icon{
+        font-size: 16px;
+    }
+    .icon2{
+        font-size: 42px;
+    }
+    .new_package{
+        font-size: 26px;
+    }
+    .icon1{
+        font-size: 32px;
+    }
+    .container1{
+        width: 100%;
+    }
+}
+@media (min-width:1000px) and (max-width:1200px){
+    .title{
+        font-size: 17px;
+    }
+    .logo{
+        width: 30px;
+        height: 30px;
+    }
+    form{
+        height: 30px;
+    }
+    .icon{
+        font-size: 18px;
+    }
+    .icon2{
+        font-size: 45px;
+    }
+    .container1{
+        width: 100%;
+    }
+}
+@media (min-width:1200px){
+    .title{
+        font-size: 20px;
+    }
+    .logo{
+        width: 40px;
+        height: 40px;
+    }
+    form{
+        height: 30px;
+    }
+    .icon{
+        font-size: 20px;
+    }
+    .icon2{
+        font-size: 45px;
+    }
+    .container1{
+        width: 100%;
+    }
+    
+}

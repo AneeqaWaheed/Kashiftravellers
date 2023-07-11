@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Icon link -->
+     <!-- Icon link -->
+     <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+
+     <!--Style sheet css-->
+     <link rel="stylesheet" href="/css/frontend/Style.css">
+ 
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+ 
+ 
+    <!--Style sheet css-->
+    <!-- Title of page -->
+    <title>Home</title>
+</head>
+
+<body>
+    
+
+
+    <!-- Header section -->
+    <%- include('header') %>
+   
+    <!-- Main section start here-->
+    <main>
+
+        <!-- Slider start here -->
+        <slider>
+            <div id="demo" class="carousel slide" data-ride="carousel">
+                <ul class="carousel-indicators">
+                    <li data-target="#demo" data-slide-to="0" class="active"></li>
+                    <li data-target="#demo" data-slide-to="1"></li>
+                    <li data-target="#demo" data-slide-to="2"></li>
+                </ul>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="/frontendImage/image3.jpeg" alt="Los Angeles" width="1100" height="500">
+                        <div class="carousel-caption">
+                            <h3>Los Angeles</h3>
+                            <p>We had such a great time in LA!</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/frontendImage/image4.jpg" alt="Chicago" width="1100" height="500">
+                        <div class="carousel-caption">
+                            <h3>Chicago</h3>
+                            <p>Thank you, Chicago!</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/frontendImage/image1.jpg" alt="New York" width="1100" height="500">
+                        <div class="carousel-caption">
+                            <h3>New York</h3>
+                            <p>We love the Big Apple!</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/frontendImage/image16.jpg" alt="New York" width="1100" height="500">
+                        <div class="carousel-caption">
+                            <h3>New York</h3>
+                            <p>We love the Big Apple!</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/frontendImages/image10.jpg" alt="New York" width="1100" height="500">
+                        <div class="carousel-caption">
+                            <h3>New York</h3>
+                            <p>We love the Big Apple!</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/frontendImage/image18.jpg" alt="New York" width="1100" height="500">
+                        <div class="carousel-caption">
+                            <h3>New York</h3>
+                            <p>We love the Big Apple!</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/frontendImage/image17.jpg" alt="New York" width="1100" height="500">
+                        <div class="carousel-caption">
+                            <h3>New York</h3>
+                            <p>We love the Big Apple!</p>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a class="carousel-control-next" href="#demo" data-slide="next">
+                    
+                    <span class="carousel-control-next-icon"></span>
+                </a>
+            </div>
+        </slider>
+
+        <!-- About section strat here -->
+        <section class="first" id="AboutUs">
+            <div class="about_section">
+                <div class="about" id="left">
+                    <img id="about_image" src="/frontendImage/pic4.jpg">
+                </div>
+                <div class="about" id="right">
+                    <h2>WHY CHOOSE US</h2>
+                    <p>Kashif Travelars is widely regarded as one of the largest
+                         and most trustworthy companies in the world, with over 27
+                        destinations on all seven conuntries. With so many tour packages and
+                        varied experience offerings available around the country,
+                        you can pick a place that fits your budget and the purpose of
+                        your vacation.The certificate allows the agency to provide clients with
+                        the most economical rates possible in the industry.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- services section starts  -->
+        <section class="services" >
+
+            <h1 class="heading-title"> our services </h1>
+
+            <div class="box-container">
+
+                <div class="box">
+                    <img src="/frontendImage/icon-1.png" alt="">
+                    <h3>Adventure</h3>
+                </div>
+
+                <div class="box">
+                    <img src="/frontendImage/icon-2.png" alt="">
+                    <h3>Tour Guide</h3>
+                </div>
+
+                <div class="box">
+                    <img src="/frontendImage/icon-3.png" alt="">
+                    <h3>Trekking</h3>
+                </div>
+
+                <div class="box">
+                    <img src="/frontendImage/icon-4.png" alt="">
+                    <h3>Camp Fire</h3>
+                </div>
+
+                <div class="box">
+                    <img src="/frontendImage/icon-5.png" alt="">
+                    <h3>Off Road</h3>
+                </div>
+
+                <div class="box">
+                    <img src="/frontendImage/icon-6.png" alt="">
+                    <h3>Camping</h3>
+                </div>
+
+            </div>
+
+        </section>
+        <!-- services section ends -->
+
+        <!-- Reviews section starts  -->
+
+        <section class="reviews">
+            <h1>Reviews</h1>
+            <div class="container">
+                <div class="box">
+                    <div class="image">
+                        <img src="/frontendImage/image12.jpg">
+                    </div>
+                    <div class="name_job">David Chrish</div>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <p> Lorem ipsum dolor sitamet, stphen hawkin so adipisicing elit. Ratione disuja doloremque
+                        reiciendi nemo.</p>
+
+                </div>
+                <div class="box">
+                    <div class="image">
+                        <img src="/frontendImage/image5.jpg">
+                    </div>
+                    <div class="name_job">Kristina Bellis</div>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <p> Lorem ipsum dolor sitamet, stphen hawkin so adipisicing elit. Ratione disuja doloremque
+                        reiciendi nemo.</p>
+
+                </div>
+                <div class="box">
+                    <div class="image">
+                        <img src="/frontendImage/image8.jpg">
+                    </div>
+                    <div class="name_job">Stephen Marlo</div>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <p> Lorem ipsum dolor sitamet, stphen hawkin so adipisicing elit. Ratione disuja doloremque
+                        reiciendi nemo.</p>
+                </div>
+            </div>
+</body>
+</section>
+<!-- home offer section ends -->
+
+
+<!-- footer section starts  -->
+
+<section class="footer">
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3>Quick Links</h3>
+            <a href="/home"> <i class="fas fa-angle-right"></i> home</a>
+            <a href="/home#AboutUs"> <i class="fas fa-angle-right"></i> about</a>
+            <a href="/FamilyPackages"> <i class="fas fa-angle-right"></i> package</a>
+            <a href="/CarRental"> <i class="fas fa-angle-right"></i> book</a>
+        </div> 
+
+        <div class="box">
+            <h3>Contact Info</h3>
+            <a href="#"> <i class="fas fa-phone"></i> +123-456-7890 </a>
+            <a href="#"> <i class="fas fa-phone"></i> +111-222-3333 </a>
+            <a href="#"> <i class="fas fa-envelope"></i> kashiftravellers@gmail.com </a>
+            <a href="#"> <i class="fas fa-map"></i> rawalpindi, pakistan - 400104 </a>
+        </div>
+
+        <div class="box">
+            <h3>Follow Us</h3>
+            <a href="#"> <i class="fab fa-facebook-f"></i> facebook </a>
+            <a href="#"> <i class="fab fa-twitter"></i> twitter </a>
+            <a href="#"> <i class="fab fa-instagram"></i> instagram </a>
+            <a href="#"> <i class="fab fa-linkedin"></i> linkedin </a>
+        </div>
+
+    </div>
+
+    <div class="credit"> Created by <span>Aqsa</span> | All rights reserved! </div>
+
+</section>
+
+<!-- footer section ends -->
+</main>
+
+</body>
+
+
+<script>
+    if(finalData)
+    {
+        console.log()
+    }
+</script>
+
+</html>

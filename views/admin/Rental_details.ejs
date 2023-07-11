@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/car_rental_details.css">
+   
+
+    <title>Responsive Regisration Form </title>
+</head>
+
+<body>
+    <div class="container">
+        <header>Car Rental Booking Form</header>
+
+        <form action="#">
+            <div class="form first">
+
+                <div class="details ID">
+                    <span class="title">Car Details</span>
+
+                    <div class="fields">
+                        <div class="car_image input-field">
+                            <img src="/Upload/<%= package1.image %>" height="200px">
+                        </div>
+                        <div class="input-field">
+                            <label>Car Name</label>
+                            <p><%= package1.car_name %></p>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Range of People</label>
+                            <p><%= package1.range_of_people %></p>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Car Type</label>
+                            <p><%= package1.car_type %></p>
+                        </div>
+
+                        <div class="input-field">
+                            <label>From:</label>
+                            <p><%= package1.from %></p>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Price:</label>
+                            <p><%= package1.price %></p>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Discount:</label>
+                            <p><%= package1.discount %></p>
+                        </div>
+                       
+                    </div>
+                </div>
+
+                <div class="input-field_1">
+                    <label>Services For Car Rental:</label>
+                    <% for (let i = 0; i < package1.service_type.length; i++) { %>
+                        <ol>
+                            
+                            <li id="car_pacakage"> <%= package1.service_type[i] %></li>
+                            
+                        </ol>
+                        <% } %>
+                </div>
+                <button class="nextBtn">
+                    <span class="btnText">Back</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

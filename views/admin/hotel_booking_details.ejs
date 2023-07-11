@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/css/car_rental_details.css">
+
+    <title>Hotel Booking Details</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>Hotel Details</header>
+
+        <form action="#">
+            <div class="form first">
+
+                <div class="details ID">
+                    <span class="title">Hotel Details</span>
+
+                    <div class="fields">
+                        <div class="car_image">
+                            <img src="/Upload/<%= getData.carRental_id.image %>" height="180px">
+                        </div>
+                        <div class="input-field">
+                            <label>Hotel Name</label>
+                            <p><%= getData.carRental_id.hotel_name  %></p>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Room Type</label>
+                            <p> <%= getData.carRental_id.hotel_type %></p>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Hotel Loction</label>
+                            <p><%= getData.carRental_id.hotal_location %></p>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Price</label>
+                            <p><%= getData.carRental_id.price %></p>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Discount</label>
+                            <p><%= getData.carRental_id.discount %></p>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Menu</label>
+                            <p><%= getData.carRental_id.menu %></p>
+                        </div>
+                    
+
+                        
+                    </div>
+                </div>
+
+                <div class="details personal">
+                    <span class="title">Personal Details</span>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Full Name</label>
+                            <p><%= package1.firstName %><%= package1.room_type %></p>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Mobile Number</label>
+                            <p><%= package1.mobile_No %></p>
+                        </div>
+
+                        <div class="input-field">
+                            <label>CNIC No:</label>
+                            <p><%= package1.cnic_no %></p>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Mobile Number:</label>
+                            <p><%= package1.mobile_No %></p>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Date:</label>
+                            <% if (package1.date) { %>
+                                <p><%= package1.date.toLocaleDateString('en-GB') %></p>
+                              <% } %>
+                            
+                        </div>
+
+                        <div class="input-field">
+                            <label>Days to Books:</label>
+                            <p><%= package1.days_to_book %></p>
+                        </div>
+                        <div class="input-field">
+                            <label>Rooms to Books:</label>
+                            <p><%= package1.rooms_to_book %></p>
+                        </div>
+                        <div class="input-field">
+                            <label>Rooms type:</label>
+                            <p><%= package1.room_type %></p>
+                        </div>
+
+                        <div class="input-field">
+                            <label>City:</label>
+                            <p><%= package1.city %></p>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Postal Code:</label>
+                            <p><%= package1.postal_code %></p>
+                        </div>
+                        <div class="input-Address">
+                            <label>Address:</label>
+                            <p><%= package1.address %></p>
+                        </div>
+                    </div>
+
+                    <button class="nextBtn">
+                        <span class="btnText">Back</span>
+                    </button>
+                </div>
+
+               
+                
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

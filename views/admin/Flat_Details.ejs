@@ -1,0 +1,94 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/car_rental_details.css">
+   
+
+    <title>Flat Details </title>
+</head>
+
+<body>
+    <div class="container">
+        <header>Flat Booking Details</header>
+
+        <form action="#">
+            <div class="form first">
+
+                <div class="details ID">
+                    <span class="title">Flat Details</span>
+
+                    <div class="fields">
+                        <div class="car_image input-field">
+                            <img src="/Upload/<%= package1.image %>" height="200px">
+                        </div>
+                        <div class="input-field">
+                            <label>Flat Name</label>
+                            <p><%= package1.hotel_name %></p>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Flat Type</label>
+                            <p><%= package1.hotel_type %></p>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Flat Location </label>
+                            <p><%= package1.hotal_location %></p>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Number of Rooms</label>
+                            <p><%= package1.number_of_room %></p>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Number of Bathroom</label>
+                            <p><%= package1.number_of_bathroom %></p>
+                        </div>
+                        <div class="input-field">
+                            <label>Number of Floor</label>
+                            <p><%= package1.number_of_floors %></p>
+                        </div>
+                        <div class="input-field">
+                            <label>Number of Flat</label>
+                            <p><%= package1.area_of_flat %></p>
+                        </div>
+                        <div class="input-field">
+                            <label>Price</label>
+                            <p><%= package1.price %></p>
+                        </div>
+                        
+                        <div class="input-field">
+                            <label>Discount:</label>
+                            <p><%= package1.discount %></p>
+                        </div>
+                       
+                    </div>
+                </div>
+
+                <div class="input-field_1">
+                    <label>Services For Flat:</label>
+                    <% for (let i = 0; i < package1.service_type.length; i++) { %>
+                        <ol>
+                            
+                            <li> <%= package1.service_type[i] %></li>
+                            
+                        </ol>
+                        <% } %>
+                </div>
+                <button class="nextBtn">
+                    <span class="btnText">Back</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

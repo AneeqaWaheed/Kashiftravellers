@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/all_forms.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+    integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+    integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+    crossorigin="anonymous"></script>
+
+  <title>Farm House</title>
+</head>
+
+<body>
+  <div class="container2">
+    <% if (message) { %>
+      <div class="alert alert-success" role="alert">
+        <%=message %>
+      </div>
+      
+      <% } %>
+    <form action="/submit-a-new-farm-date" method="post" enctype="multipart/form-data" class="container1">
+
+      <div class="left">
+        <div class="portion">
+          <p><b>(Do You apply the following rules for the car) </b></p>
+          <input name="rules" type="checkbox" name="" id="" class="form-check-input"> Rules <br>
+          <ol>
+            <li>You are responsible to pay for any demage</li>
+            <li>We are not responsible for your luggage protection</li>
+            <li><input name="newRule" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                placeholder="other">
+            </li>
+          </ol>
+        </div>
+        <div class="portion">
+          <h3>Services </h3>
+          <small>(tick the box for sevices you have)</small> <br>
+
+          <input name="service_type" type="checkbox" id=" " class="form-check-input" value="with Security Guard"> with Security Guard <br>
+          <input name="service_type" type="checkbox" id=" " class="form-check-input" value="with Cook"> with Cook <br>
+          <input name="service_type" type="checkbox" id=" " class="form-check-input" value="with Laundary"> with Laundary <br>
+          <input name="newService" type="text " class="form-control" placeholder="other">
+
+        </div>
+      </div>
+      <div class="right">
+        <h2 class="maintext">Add Farm House Details</h2>
+
+        <div class="outer-container">
+          <div class="containerx">
+
+            <input type="file" id="file" name="image" accept="image/*" hidden>
+            <div class="image-area" data-img="hello.png">
+
+              <i class="fa fa-cloud-upload iconx" aria-hidden="true"></i>
+              <h3>Upload Image</h3>
+              <p>Image size must be less than <span>100x100 </span> px</p>
+             
+            </div>
+            <button type="button" class="select-image"> <input type="file" id="file" name="image"
+                accept="image/*" hidden>Choose image</button>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Name</label>
+          <input name="farm_name" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+
+
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Description</label>
+            <textarea name="description" class="form-control" placeholder="Add Description" id="floatingTextarea2"
+              style="height: 100px" required></textarea>
+
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Location</label>
+            <input name="farm_location" type="text" class="form-control" id="exampleInputEmail1"
+              aria-describedby="emailHelp" placeholder="i.e Lahore" required>
+          </div>
+          <div class=" parallel w-100">
+            <div class="d-flex flex-row  w-100">
+              <label for="exampleInputEmail1" class="mx-3  w-100 form-label">Area</label>
+              <label for="exampleInputEmail1" class="mx-3  w-100 form-label">Width</label>
+              <label for="exampleInputEmail1" class=" mx-3 w-100 form-label">Length</label>
+
+            </div>
+          </div>
+          <div class=" parallel ">
+            <div class="d-flex flex-row   w-100 ">
+              <input name="area" type="text" class="form-control P-2  w-100" aria-label="Username" id="area" pattern="[0-9.]+" title="Only Numbers Allowed"  required>
+              <input name="width" type="number" class="form-control P-2  w-100" placeholder="Width(optional)" aria-label="Server"
+                id="Width">
+              <input name="length" type="number" class="form-control P-2  w-100" placeholder="Length(optional)"
+                aria-label="Server" id="Length">
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Number of Bed Rooms</label>
+            <input name="number_of_bed_rooms" type="text" class="form-control" id="exampleInputEmail1"
+              aria-describedby="emailHelp"pattern="[0-9.]+" title="Only Numbers Allowed" required >
+
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Number of Kitchens</label>
+            <input name="number_of_kitchens" type="text" class="form-control" id="exampleInputEmail1"
+              aria-describedby="emailHelp" pattern="[0-9.]+" title="Only Numbers Allowed" required >
+
+          </div>
+          <div class="portion1">
+            <h3>Essentials </h3>
+            <small>(check the essentials you have in your Farm House)</small> <br>
+
+            <input name="essentials_type" type="checkbox" name="" id=" " class="form-check-input" value="Cinema"> Cinema <br>
+            <input name="essentials_type" type="checkbox" name="" id=" " class="form-check-input" value="Glof/Snooker"> Glof/Snooker <br>
+            <input name="essentials_type" type="checkbox" name="" id=" " class="form-check-input" value="Gim"> Gim <br>
+            <input name="essentials_type" type="checkbox" name="" id=" " class="form-check-input" value="Barn"> Barn<br>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Number Rooms other than BedRoom</label>
+              <input name="number_of_other_rooms" type="text" class="form-control" id="exampleInputEmail1"
+                aria-describedby="emailHelp" pattern="[0-9.]+" title="Only Numbers Allowed" required >
+
+            </div>
+            <input name="new_essentials" type="text" name="" id=" " class="form-control"
+              placeholder="Other Essentials"> <br>
+          </div>
+         
+
+          
+          <div class=" parallel w-100">
+            <div class="d-flex flex-row  w-100">
+              <label for="exampleInputEmail1" class="mx-3  w-100 form-label  fw-normal">Price</label>
+              <label for="exampleInputEmail1" class="mx-3  w-100 form-label  fw-normal">Discount</label>
+            </div>
+          </div>
+          <div class=" parallel w-100">
+            <div class="d-flex flex-row  w-100">
+              <input name="price" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" pattern="[0-9.]+" title="Only Numbers Allowed" required >
+              <input name="discount" type="Number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+  
+             
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary w-100 mt-3  ">Submit</button>
+
+        </div>
+
+    </form>
+  </div>
+  <script src="/js/upload_image.js"></script>
+</body>
+
+</html>
